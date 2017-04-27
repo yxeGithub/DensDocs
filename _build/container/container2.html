@@ -1,0 +1,302 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Container 2 &mdash; Dens - Docs alpha documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/my_theme.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Dens - Docs alpha documentation" href="../index.html"/>
+        <link rel="up" title="Containers" href="container.html"/>
+        <link rel="next" title="Putty Things" href="../putty/putty.html"/>
+        <link rel="prev" title="Container 1" href="container1.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Dens - Docs
+          
+
+          
+            
+            <img src="../_static/logo.svg" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                alpha
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx/sphinx.html">Sphinx Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud/cloud.html">Cloud&#8217;ish Things</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="container.html">Containers</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="container1.html">Container 1</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Container 2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#task-1-review-read-pool-py">Task 1 – Review read_pool.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#task-2-run-read-pool-py">Task 2 – Run read_pool.py</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../putty/putty.html">Putty Things</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Dens - Docs</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="container.html">Containers</a> &raquo;</li>
+        
+      <li>Container 2</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/yxe_se/Dens-Docs/blob/master/source/container/container2.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="container-2">
+<h1>Container 2<a class="headerlink" href="#container-2" title="Permalink to this headline">¶</a></h1>
+<p>In this lab we will review, line-by-line an example script that has been
+created to view the attributes of a BIG-IP Pool directly from the
+command line.</p>
+<div class="section" id="task-1-review-read-pool-py">
+<h2>Task 1 – Review read_pool.py<a class="headerlink" href="#task-1-review-read-pool-py" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Open <code class="docutils literal"><span class="pre">read_pool.py</span></code> in Notepad++</li>
+<li>We will review the code. For brevity we have removed lines that are
+common with previous examples:</li>
+</ol>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="ow">not</span> <span class="n">mgmt</span><span class="o">.</span><span class="n">tm</span><span class="o">.</span><span class="n">ltm</span><span class="o">.</span><span class="n">pools</span><span class="o">.</span><span class="n">pool</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">partition</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">pool_name</span><span class="p">):</span>
+<span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Pool &#39;</span><span class="si">%s</span><span class="s2">&#39; does not exist&quot;</span> <span class="o">%</span> <span class="n">args</span><span class="o">.</span><span class="n">pool_name</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This if statement checks to see if a pool with the same name exists
+in the specified partition on the device. The key difference between
+this and the example in the previous lab is the inclusion of the
+‘not’ keyword. This inverses the logic of the statement so that the
+Exception is raised when the pool DOES NOT exist</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">pool</span> <span class="o">=</span> <span class="n">mgmt</span><span class="o">.</span><span class="n">tm</span><span class="o">.</span><span class="n">ltm</span><span class="o">.</span><span class="n">pools</span><span class="o">.</span><span class="n">pool</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">partition</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">pool_name</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This line loads the configuration of the pool into a variable</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="s2">&quot;Pool </span><span class="si">%s</span><span class="s2">:&quot;</span> <span class="o">%</span> <span class="n">pool_path</span>
+<span class="n">pp</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">pool</span><span class="o">.</span><span class="n">raw</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>These lines print the human-readable pool path and then uses the
+PrettyPrint library to dump all the attributes associated with the
+pool</p>
+</div>
+<div class="section" id="task-2-run-read-pool-py">
+<h2>Task 2 – Run read_pool.py<a class="headerlink" href="#task-2-run-read-pool-py" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">In the command prompt type <code class="docutils literal"><span class="pre">python</span> <span class="pre">read_pool.py</span> <span class="pre">10.1.1.4</span> <span class="pre">test_pool</span></code>
+and examine the output:</p>
+<p><a class="reference internal" href="../_images/image070.png"><img alt="image70" src="../_images/image070.png" style="width: 6.33450in; height: 4.50574in;" /></a></p>
+</li>
+<li><p class="first">Notice the various attributes that are associated with the pool. Take
+note of the value of the <code class="docutils literal"><span class="pre">loadBalancingMode</span></code> attribute for the next
+lab</p>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../putty/putty.html" class="btn btn-neutral float-right" title="Putty Things" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="container1.html" class="btn btn-neutral" title="Container 1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, F5 Networks - Denis Grimard.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'alpha',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
