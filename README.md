@@ -1,2 +1,2 @@
 # DensDocs
-A location to store my documentaion of handy commands
+A location to store my documentation of handy commands
