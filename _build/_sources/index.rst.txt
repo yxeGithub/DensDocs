@@ -11,3 +11,4 @@ Dens - Docs
    cloud/cloud
    container/container
    putty/putty
+   rest/rest

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Containers &mdash; Dens - Docs alpha documentation</title>
+  <title>REST &mdash; Dens - Docs alpha documentation</title>
   
 
   
@@ -38,8 +38,8 @@
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Dens - Docs alpha documentation" href="../index.html"/>
-        <link rel="next" title="Docker Basics" href="container1.html"/>
-        <link rel="prev" title="Cloud 5" href="../cloud/cloud5.html"/> 
+        <link rel="up" title="Rest Things" href="rest.html"/>
+        <link rel="prev" title="Rest Things" href="rest.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -100,13 +100,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../intro.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../sphinx/sphinx.html">Sphinx Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud/cloud.html">Cloud&#8217;ish Things</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Containers</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="container1.html">Docker Basics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="container2.html">Container 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../container/container.html">Containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../putty/putty.html">Putty Things</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="rest.html">Rest Things</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">REST</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rest-commands">REST Commands</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../putty/putty.html">Putty Things</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rest/rest.html">Rest Things</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -151,14 +153,16 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Containers</li>
+          <li><a href="rest.html">Rest Things</a> &raquo;</li>
+        
+      <li>REST</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/yxe_se/Dens-Docs/blob/master/source/container/container.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/yxe_se/Dens-Docs/blob/master/source/rest/rest1.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -172,14 +176,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="containers">
-<h1>Containers<a class="headerlink" href="#containers" title="Permalink to this headline">¶</a></h1>
-<p>This is a collection of the container things i have gathered - think hoarders - :)</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="container1.html">Docker Basics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="container2.html">Container 2</a></li>
-</ul>
+  <div class="section" id="rest">
+<h1>REST<a class="headerlink" href="#rest" title="Permalink to this headline">¶</a></h1>
+<p>Useful rest information</p>
+<div class="section" id="rest-commands">
+<h2>REST Commands<a class="headerlink" href="#rest-commands" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Here is the first rest command</li>
+</ol>
+<div class="code rest highlight-default"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">sk</span> <span class="o">-</span><span class="n">u</span> <span class="n">admin</span><span class="p">:</span><span class="n">password</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">bigip</span><span class="o">.</span><span class="n">domain</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">mgmt</span><span class="o">/</span><span class="n">tm</span><span class="o">/</span><span class="n">ltm</span><span class="o">/</span><span class="n">pool</span> <span class="o">-</span><span class="n">H</span> <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="o">|</span> <span class="n">sed</span> <span class="s1">&#39;s/,/</span><span class="se">\&#39;</span><span class="s1">$&#39;</span>\<span class="n">n</span><span class="o">/</span><span class="n">g</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -193,10 +200,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="container1.html" class="btn btn-neutral float-right" title="Docker Basics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="../cloud/cloud5.html" class="btn btn-neutral" title="Cloud 5" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="rest.html" class="btn btn-neutral" title="Rest Things" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
