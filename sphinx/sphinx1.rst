@@ -17,7 +17,7 @@ To start the sphinx server do the following
 #. Change to the correct directory (in my case - /Users/grimard/Documents/Sphinx)
 
 #. Start the server with the following command:
-    sphinx-autobuild DensExample/ DensExample/_build
+    sphinx-autobuild DensDocs/ DensDocs/_build
 
 
 .. |image1| image:: /_static/image001.png
